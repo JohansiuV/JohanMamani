@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portfolio Personal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== FONDO ANIMADO ========== -->
+  <div class="aurora-bg" aria-hidden="true">
+    <span class="aurora-blob b1"></span>
+    <span class="aurora-blob b2"></span>
+    <span class="aurora-blob b3"></span>
+    <span class="aurora-blob b4"></span>
+  </div>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav-bar">
+    <div class="nav-left">
+      <span class="nav-flag">👨🏻‍💻</span>
+      <span class="nav-location" id="userLocation">América/Lima</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#home" class="nav-link active" data-section="home">🏠 Inicio</a>
+      <a href="#about" class="nav-link" data-section="about">👤 Sobre mí</a>
+      <a href="#certificates" class="nav-link" data-section="certificates">🏆 Certificados</a>
+      <a href="#contact" class="nav-link" data-section="contact">📬 Contacto</a>
+      <button class="theme-toggle" id="themeToggle" title="Cambiar tema">🌙</button>
+    </nav>
+    <div class="nav-right">
+      <span class="nav-time" id="navTime">--:--:-- --</span>
+    </div>
+  </header>
+
+  <!-- ========== SECTION 1: HOME ========== -->
+  <section id="home" class="section active">
+    <div class="grid-bg"></div>
+    <div class="home-content">
+      <div class="hero-tag">Software Developer & Futbolista</div>
+      <h1 class="hero-title">
+        <span class="title-line">Desarrollador</span>
+        <span class="title-line accent">de Software</span>
+      </h1>
+      <p class="hero-subtitle">
+        👋 Hola <span class="tag-inline">Bienvenido</span>, soy <strong>Johan Daniel Mamani Ccuno</strong>, un
+        apasionado por la tecnología, el fútbol y el fitness que convierte ideas en soluciones reales.
+      </p>
+      <div class="hero-actions">
+        <a href="#about" class="btn-primary" onclick="showSection('about')">
+          <img src="avatar-placeholder.png" class="btn-avatar" onerror="this.style.display='none'" alt="" />
+          Sobre mí
+        </a>
+        <a href="#certificates" class="btn-outline" onclick="showSection('certificates')">Ver Certificados →</a>
+        <div class="whatsapp-link">
+          <a href="https://wa.me/51934420700" class="whatsapp-fab" target="_blank" rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp" title="Contactar por WhatsApp">
+            <span>💬</span>
+          </a>
+          <span class="whatsapp-label">Contáctame</span>
+        </div>
+      </div>
+      <blockquote class="hero-quote">
+        "El código que no está escrito es el más fácil de mantener."
+        <cite>— Alguien sabio</cite>
+      </blockquote>
+    </div>
+
+    <div class="tech-stack">
+      <h3>Mi Stack Tecnológico</h3>
+      <div class="tech-icons">
+        <div class="tech-icon" title="HTML5">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M6 2l2.4 26.8L16 31l7.6-2.2L26 2H6z" fill="#E34F26" />
+            <path d="M16 28.4l6.2-1.7 2-22.7H16v24.4z" fill="#EF652A" />
+            <path d="M16 13H11.4l-.3-3.6H16V6H8.6l.8 9H16v-2zm0 7.6l-.1.1-3.9-1.1-.2-2.8H8.7l.5 5.5 6.8 1.9V20.6z"
+              fill="#fff" />
+            <path d="M16 13v2.8h4.2l-.4 4.7-3.8 1.1v3.1l6.8-1.9.1-.8.7-8.2.1-.8H16z" fill="#EBEBEB" />
+          </svg>
+          <span>HTML</span>
+        </div>
+        <div class="tech-icon" title="CSS3">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M6 2l2.4 26.8L16 31l7.6-2.2L26 2H6z" fill="#1572B6" />
+            <path d="M16 28.4l6.2-1.7 2-22.7H16v24.4z" fill="#33A9DC" />
+            <path d="M16 13H11l-.2-2.4H16V8.2H8.2l.6 6.2H16V13zm0 9.8l-3.8-1-.2-2.5H9.8l.4 4.6 5.8 1.6V22.8z"
+              fill="#fff" />
+            <path d="M15.9 13v2.4h4.8l-.4 4-4.4 1.2v2.2l4.7-1.3.1-.5.8-9.5H16z" fill="#EBEBEB" />
+          </svg>
+          <span>CSS</span>
+        </div>
+        <div class="tech-icon" title="JavaScript">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" fill="#F7DF1E" />
+            <path
+              d="M9 25.9l2.2-1.3c.4.8.8 1.4 1.7 1.4.9 0 1.4-.3 1.4-1.7V15h2.7v9.3c0 2.8-1.6 4-4 4-2.1 0-3.3-1.1-3.9-2.4H9zM18.6 25.6l2.2-1.3c.6 1 1.3 1.7 2.6 1.7 1.1 0 1.8-.5 1.8-1.3 0-.9-.7-1.2-1.9-1.7l-.7-.3c-1.9-.8-3.1-1.8-3.1-3.9 0-1.9 1.5-3.4 3.7-3.4 1.6 0 2.8.6 3.6 2l-2 1.4c-.4-.8-1-1.1-1.7-1.1-.8 0-1.2.5-1.2 1.1 0 .8.5 1.1 1.6 1.6l.7.3c2.2.9 3.4 1.9 3.4 4.1 0 2.3-1.8 3.6-4.2 3.6-2.4 0-3.9-1.1-4.7-2.8z"
+              fill="#000" />
+          </svg>
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-icon" title="Python">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path
+              d="M15.9 3C10.7 3 11 5.4 11 5.4V8h5v1H7.6S4 8.6 4 14c0 5.4 3.2 5.2 3.2 5.2H9v-2.5s-.1-3.2 3.2-3.2h5.5s3 .1 3-2.9V6.1S21.2 3 15.9 3zm-3 1.8c.6 0 1 .5 1 1s-.4 1-1 1c-.5 0-1-.5-1-1 0-.6.5-1 1-1z"
+              fill="#3572A5" />
+            <path
+              d="M16.1 29c5.2 0 4.9-2.4 4.9-2.4V24h-5v-1h8.4S28 23.4 28 18c0-5.4-3.2-5.2-3.2-5.2H23v2.5s.1 3.2-3.2 3.2h-5.5s-3-.1-3 2.9v4.6S10.8 29 16.1 29zm3-1.8c-.6 0-1-.5-1-1s.4-1 1-1c.5 0 1 .5 1 1 0 .6-.5 1-1 1z"
+              fill="#FFD545" />
+          </svg>
+          <span>Python</span>
+        </div>
+        <div class="tech-icon" title="Git">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path
+              d="M29.5 14.7L17.3 2.5a1.7 1.7 0 00-2.4 0l-2.4 2.4 3 3a2 2 0 012.6 2.6l2.9 2.9a2 2 0 012.6 2.6 2 2 0 01-2 2 2 2 0 01-2-2c0-.2 0-.4.1-.6L19 13v6.7a2 2 0 01.5 3.3 2 2 0 01-2.8-2.8 2 2 0 011-1.7V13a2 2 0 01-1.1-2.6L13.7 7.5l-11.2 11a1.7 1.7 0 000 2.4L14.7 33a1.7 1.7 0 002.4 0L29.5 17a1.7 1.7 0 000-2.3z"
+              fill="#F05032" />
+          </svg>
+          <span>Git</span>
+        </div>
+        <div class="tech-icon" title="React">
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="2.5" fill="#61DAFB" />
+            <path
+              d="M16 9.5c5 0 9.6 1 12.4 2.6C31.3 13.7 32 15 32 16s-.7 2.3-3.6 3.9C25.6 21.5 21 22.5 16 22.5s-9.6-1-12.4-2.6C.7 18.3 0 17 0 16s.7-2.3 3.6-3.9C6.4 10.5 11 9.5 16 9.5z"
+              stroke="#61DAFB" stroke-width="1.5" fill="none" />
+            <path
+              d="M10.5 12.8C13 8.5 16 5.4 18.6 4c1.3-.7 2.5-.8 3.3-.2.8.6 1.1 1.8.8 3.5-.3 1.8-1.4 4-2.9 6.4-1.5 2.4-3.3 4.5-5 5.9-1.7 1.4-3.4 2.3-4.7 2.3-.3 0-.6 0-.9-.2-.8-.6-1.1-1.8-.8-3.5.3-1.8 1.4-4 2.9-6.4h.2z"
+              stroke="#61DAFB" stroke-width="1.5" fill="none" />
+            <path
+              d="M10.5 19.2C13 23.5 16 26.6 18.6 28c1.3.7 2.5.8 3.3.2.8-.6 1.1-1.8.8-3.5-.3-1.8-1.4-4-2.9-6.4-1.5-2.4-3.3-4.5-5-5.9-1.7-1.4-3.4-2.3-4.7-2.3-.3 0-.6 0-.9.2-.8.6-1.1 1.8-.8 3.5.3 1.8 1.4 4 2.9 6.4h.2z"
+              stroke="#61DAFB" stroke-width="1.5" fill="none" />
+          </svg>
+          <span>React</span>
+        </div>
+        <div class="tech-icon" title="Node.js">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 3L4 9.8v12.4L16 29l12-6.8V9.8L16 3zm0 2.3l9.8 5.6v11.2L16 27.7l-9.8-5.6V10.9L16 5.3z"
+              fill="#8CC84B" />
+            <path
+              d="M16 10.5c-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5-2.5-5.5-5.5-5.5zm0 9c-2 0-3.5-1.5-3.5-3.5s1.5-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.5 3.5-3.5 3.5z"
+              fill="#8CC84B" />
+          </svg>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-icon" title="VS Code">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path
+              d="M23.8 3.1L13 14.4 6.5 8.9 3 10.8v10.4l3.5 1.9 6.5-5.5L23.8 29 29 26.6V5.4L23.8 3.1zM27 24.5l-14-9.5 14-9.5v19z"
+              fill="#007ACC" />
+          </svg>
+          <span>VS Code</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="grid-bg"></div>
+    <div class="about-layout">
+      <!-- Sidebar -->
+      <aside class="about-sidebar">
+        <div class="profile-photo-wrapper">
+          <img id="profilePhoto" src="FOTO/johan1.png" alt="Mi foto"
+            class="profile-photo"
+            onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMxZTI0M2IiLz48Y2lyY2xlIGN4PSIxMDAiIGN5PSI4MCIgcj0iNDAiIGZpbGw9IiMzMzQ0NmQiLz48ZWxsaXBzZSBjeD0iMTAwIiBjeT0iMTcwIiByeD0iNjAiIHJ5PSI0MCIgZmlsbD0iIzMzNDQ2ZCIvPjwvc3ZnPg==' />
+        </div>
+        <div class="profile-location">
+          <span>👩🏻‍💻</span> <span id="locationText">América / Lima</span>
+        </div>
+        <div class="profile-langs">
+          <span class="lang-badge">Español</span>
+          <span class="lang-badge">English</span>
+        </div>
+        <nav class="about-nav">
+          <a href="#intro-anchor" class="about-nav-link">Introducción</a>
+          <a href="#experience-anchor" class="about-nav-link">Experiencia</a>
+          <a href="#studies-anchor" class="about-nav-link">Estudios</a>
+          <a href="#skills-anchor" class="about-nav-link">Habilidades</a>
+          <a href="#certs-anchor" class="about-nav-link">Certificaciones</a>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <main class="about-main">
+        <div class="schedule-btn-wrap">
+          <button class="btn-schedule">📅 Agendar una llamada →</button>
+        </div>
+        <h1 class="about-name">JOHAN DANIEL MAMANI CCUNO</h1>
+        <p class="about-role">Desarrollador de Software</p>
+
+        <div class="social-links">
+          <a href="#" class="social-link">GitHub</a>
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">X</a>
+          <a href="#" class="social-link">Email</a>
+        </div>
+
+        <p class="about-bio" id="intro-anchor">
+          Soy un desarrollador apasionado con experiencia en la creación de aplicaciones web robustas. Me especializo en
+          tecnologías modernas, principios orientados a objetos y patrones de diseño de la industria para entregar
+          soluciones eficientes y escalables. Además, me apasiona el fútbol y el ejercicio como forma de mantener el
+          equilibrio entre mente y cuerpo.
+        </p>
+
+<div class="about-actions">
+  <a href="PDF/JOHAN DANIEL MAMANI CCUNO (2).pdf"
+     class="btn-primary" 
+     download="CV_Johan_Mamani_Ccuno.pdf">Descargar CV ↓</a>
+  <a href="#contact" class="btn-outline" onclick="showSection('contact')">Contáctame ☕</a>
+</div>
+
+        <h2 class="section-heading" id="experience-anchor">Experiencia Laboral</h2>
+        <div class="experience-item">
+          <div class="exp-header">
+            <div>
+              <div class="exp-company">[Empresa]</div>
+              <div class="exp-role">Desarrollador de Software</div>
+            </div>
+            <div class="exp-date">2023 - presente</div>
+          </div>
+          <ul class="exp-list">
+            <li>Desarrollo de aplicaciones web completas con tecnologías modernas.</li>
+            <li>Optimización del rendimiento y tiempo de respuesta de APIs.</li>
+            <li>Colaboración en equipos ágiles y entrega continua de valor.</li>
+          </ul>
+        </div>
+
+        <h2 class="section-heading" id="studies-anchor">Estudios</h2>
+        <div class="experience-item">
+          <div class="exp-header">
+            <div>
+              <div class="exp-company">IES PRIVADO "MARIA ELENA MOYANO"</div>
+              <div class="exp-role">Ingeniería de Sistemas / Informática</div>
+            </div>
+            <div class="exp-date">2019 - 2023</div>
+          </div>
+        </div>
+
+        <h2 class="section-heading" id="skills-anchor">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-tag">HTML / CSS</div>
+          <div class="skill-tag">JavaScript</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">React</div>
+          <div class="skill-tag">Node.js</div>
+          <div class="skill-tag">Git & GitHub</div>
+          <div class="skill-tag">SQL</div>
+          <div class="skill-tag">REST APIs</div>
+        </div>
+
+        <h2 class="section-heading" id="certs-anchor">Certificaciones</h2>
+        <p class="about-bio">Visita la sección de <a href="#certificates" class="text-link"
+            onclick="showSection('certificates')">Certificados</a> para ver todos mis logros.</p>
+      </main>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: CERTIFICATES ========== -->
+  <section id="certificates" class="section">
+    <div class="grid-bg"></div>
+    <div class="section-container">
+      <div class="section-header">
+        <h2>🏆 Mis Certificados</h2>
+        <p>Logros y formaciones que validan mi trayectoria profesional</p>
+      </div>
+      <div class="cert-upload-panel">
+        <div class="cert-upload-row">
+          <div class="cert-upload-options">
+            <p class="cert-upload-hint">Aquí se muestran tres certificados destacados cargados directamente desde la carpeta FOTO de este proyecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="programacion">Programación</button>
+        <button class="filter-btn" data-filter="cloud">Cloud</button>
+        <button class="filter-btn" data-filter="diseno">Diseño</button>
+        <button class="filter-btn" data-filter="otros">Otros</button>
+      </div>
+      <div class="certs-grid" id="certsGrid">
+        <!-- Los certificados se cargan dinámicamente -->
+        <div class="cert-placeholder">
+          <div class="cert-placeholder-icon">🏅</div>
+          <p>Aún no hay certificados. <br />Sube la foto de tu primer certificado arriba 👆</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MODAL: EDITAR CERTIFICADO ========== -->
+  <div class="cert-edit-modal" id="certEditModal">
+    <div class="cert-edit-card">
+      <h3>✏️ Editar certificado</h3>
+      <input type="text" id="editCertTitle" class="field-input" placeholder="Título del certificado" />
+      <input type="text" id="editCertIssuer" class="field-input" placeholder="Institución emisora" />
+      <input type="text" id="editCertDate" class="field-input" placeholder="Fecha (ej: Junio 2024)" />
+      <select class="field-input" id="editCertCategory">
+        <option value="programacion">Programación</option>
+        <option value="cloud">Cloud</option>
+        <option value="diseno">Diseño</option>
+        <option value="otros">Otros</option>
+      </select>
+      <div class="cert-edit-actions">
+        <button class="btn-primary" id="editCertSave">💾 Guardar</button>
+        <button class="btn-outline" id="editCertCancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SECTION 4: CONTACT ========== -->
+  <section id="contact" class="section">
+    <div class="grid-bg"></div>
+    <div class="section-container contact-layout">
+      <div class="contact-hero">
+        <h2>📬 Encuéntrame</h2>
+        <p>¿Tienes un proyecto en mente, quieres colaborar o simplemente conversar? Estoy disponible.</p>
+      </div>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">💻</div>
+          <h3>GitHub</h3>
+          <p>Mira mis repositorios y proyectos open source</p>
+          <a href="https://github.com/JohansiuV" target="_blank" rel="noopener noreferrer" class="contact-link">@JohansiuV →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">💼</div>
+          <h3>LinkedIn</h3>
+          <p>Conéctate conmigo para oportunidades laborales</p>
+          <a href="https://linkedin.com/in/johan-ccuno-sistemas" target="_blank" rel="noopener noreferrer"
+            class="contact-link">johan-ccuno-sistemas →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🅾</div>
+          <h3>Instagram</h3>
+          <p>Fotos de mi vida como desarrollador y futbolista</p>
+          <a href="https://instagram.com/eark_mn" target="_blank" rel="noopener noreferrer" class="contact-link">@Johansu04v →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🐦</div>
+          <h3>X / Twitter</h3>
+          <p>Pensamientos rápidos sobre tech y más</p>
+          <a href="https://x.com/Johansu04v" target="_blank" rel="noopener noreferrer" class="contact-link">@Johansu04v →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3>Email</h3>
+          <p>Para consultas formales o colaboraciones</p>
+          <a href="mailto:brayanmamaniccuno@gmail.com" class="contact-link">brayanmamaniccuno@gmail.com →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🇾🇹</div>
+          <h3>You Tube</h3>
+          <p>Para consultas formales o colaboraciones</p>
+          <a href="https://www.youtube.com/@Darkiel-System" target="_blank" rel="noopener noreferrer" class="contact-link">@Darkiel-System →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🔵</div>
+          <h3>Facebook</h3>
+          <p>Conecta conmigo en Facebook</p>
+          <a href="https://www.facebook.com/VGDarkiel" target="_blank" rel="noopener noreferrer" class="contact-link">@VGDarkiel →</a>
+        </div>
+
+        <div class="project-links">
+          <h3>🚀 Proyectos Destacados</h3>
+          <div class="project-list">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-card">
+              <span class="project-name">Proyecto 1</span>
+              <span class="project-tech">HTML · CSS · JS</span>
+              <span class="project-arrow">↗</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-card">
+              <span class="project-name">Proyecto 2</span>
+              <span class="project-tech">React · Node.js</span>
+              <span class="project-arrow">↗</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-card">
+              <span class="project-name">Proyecto 3</span>
+              <span class="project-tech">Python · Django</span>
+              <span class="project-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close">✕</button>
+    <img id="lightboxImg" src="" alt="" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <p>© 2025 / <strong>Johan Daniel Mamani Ccuno</strong> / Todos los derechos reservados</p>
+    <div class="footer-socials">
+      <a href="https://github.com/JohansiuV" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/johan-ccuno-sistemas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://instagram.com/eark_mn" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/Johansu04v" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="mailto:brayanmamaniccuno@gmail.com">Email</a>
+    </div>
+  </footer>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
